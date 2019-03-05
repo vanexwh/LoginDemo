@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <title>Sign in & Sign up</title>
+    <link rel="stylesheet" href="css/login.css" />
+</head>
+<body>
+    <!-- login -->
+    <div class="user_window signIn">
+        <div class="window_left">
+            <p>
+                UserName:&nbsp;&nbsp;<input type="text" name="" maxlength="18" placeholder="Please enter your username" class="inputname" onblur="nameChange()" />
+                <span class="hint nameHint"></span>
+            </p>
+            <p>
+                Password:&nbsp;&nbsp;<input type="password" name="" maxlength="18" placeholder="Please enter your password" class="inputpassword" onblur="passwordChange()" />
+                <span class="hint passwordHint"></span>
+            </p>
+            <p>
+                Verification Code:&nbsp;&nbsp;<input type="text" name="" maxlength="8" placeholder="" class="verification_code" onblur="codeChange()" />
+                <em class="gain_code" onclick="createcode()">ss</em>
+                <span class="hint codeHint"></span>
+            </p>
+            <button type="button" class="loginBtn btn" onclick="signinClick()">Sign in</button>
+            <button type="button" class="forgetBtn btn">Forgot Password ?</button>
+        </div>
+        <div class="window_right">
+            <p>No account yet ?</p>
+            <h2 class="register" id="register">Sign up Now ! <span>➡</span></h2>
+        </div>
+    </div>
+    <!-- login -->
+    <!-- register -->
+    <div class="user_window signUp" style="display: none;">
+        <div class="window_left">
+            <p>
+                UserName:&nbsp;&nbsp;<input type="text" name="" placeholder="please enter 6 to 12 characters" class="Reginputname" onblur="RegnameChange()" />
+                <span class="hint RegnameHint"></span>
+            </p>
+            <p>
+                Password:&nbsp;&nbsp;<input type="password" name="" placeholder="please enter 6 to 12 characters" class="Reginputpassword" onblur="RegpasswordChange()" />
+                <span class="hint RegpasswordHint"></span>
+            </p>
+            <p>
+                Comfirm Password:&nbsp;&nbsp;<input type="password" name="" placeholder="enter your password again" class="passwordComfirm" onblur="passwordComfirm()" />
+                <span class="hint passwordHintComfirm"></span>
+            </p>
+            <p>
+                Email:&nbsp;&nbsp;<input type="text" name="" placeholder="Please enter your email" class="inputemail" onblur="emailChange()" />
+                <span class="hint emailHint"></span>
+            </p>
+            <button type="button" class="loginBtn btn">Sign up</button>
+        </div>
+        <div class="window_right">
+            <p>Have an account ?</p>
+            <h2 class="login" id="login">Sign in Now ! <span>➡</span></h2>
+        </div>
+    </div>
+    <!-- register -->
+</body>
+<script src="js/common.js"></script>
+<script src="js/login.js"></script>
+</html>
